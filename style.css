@@ -25,11 +25,11 @@ ul {
   list-style-type: none;
 }
 
-/*fixa a love focus hate*/
 a {
   text-decoration: none;
   position: relative;
   transition: opacity 0.3s ease-in-out;
+  display: block;
 }
 
 a:link,
@@ -65,10 +65,10 @@ header .container {
 }
 
 header img {
-  width: 50px;
+  width: 58px;
 }
 
-header h1 {
+header h2 {
   font-family: "Pompiere", sans-serif;
 }
 
@@ -98,7 +98,8 @@ header ul li {
   padding: 10px;
 }
 
-header li a:link, header li a:visited {
+header li a:link,
+header li a:visited {
   color: var(--light-color);
 }
 
@@ -135,6 +136,11 @@ header .hamburger-button:hover .bar {
   opacity: 0.8;
 }
 
+/*MAIN*/
+main h2{
+  font-size: 2.5rem;
+}
+
 /*HERO SECTION*/
 .hero {
   min-height: calc(100vh - 105px);
@@ -143,42 +149,77 @@ header .hamburger-button:hover .bar {
     url(images/Hero-image.png) no-repeat center / cover;
   position: relative;
   display: flex;
-}
-
-.hero .container {
-  margin-top: 40px;
+  align-items: center;
 }
 
 .hero h1 {
-  font-size: 2rem;
   color: var(--light-color);
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .hero h2 {
-  font-size: 1.25rem;
-  line-height: 1.7;
+  color: var(--light-color);
+  font-size: 1.2rem;
   font-weight: 400;
-  color: var(--light-color);
+  line-height: 1.7;
+  margin-top: 20px;
 }
 
-.hero a {
-  margin-top: 12px;
-  color: var(--light-color);
-  margin-bottom: 60px;
+.hero .btn {
+  margin-top: 16px;
 }
 
-.hero img {
-  position: absolute;
-  bottom: 0;
-}
-
-.hero .custom-shape-divider-bottom-1721999764 {
+.custom-shape-divider-bottom-1722010389 {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1722010389 svg {
+  position: relative;
+  display: block;
+  width: calc(146% + 1.3px);
+  height: 92px;
+}
+
+.custom-shape-divider-bottom-1722010389 .shape-fill {
+  fill: #f7f7f7;
+}
+
+/*TJÄNSTER*/
+.services .service-content{
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.services a{
+  margin-top: 20px;
+}
+
+.services a:link, .services a:visited {
+  color: var(--accessory-color-2)
+}
+
+.services img{
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+}
+
+.services .card-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 100px;
 }
 
 /*Utility classes*/
@@ -200,12 +241,46 @@ header .hamburger-button:hover .bar {
   top: 0;
 }
 
+.red{
+  color: var(--accessory-color-1);
+  font-weight: 800;
+}
+
+.card{
+  background-color: var(--accessory-color-1);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  color: var(--light-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 28px;
+  transition: ease-in-out 0.4s;
+}
+
+.card:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.card i{
+  font-size: 2rem;
+}
+
+.card h3{
+  margin-top: 12px;
+}
+
+.card p{
+  margin-top: 8px;
+}
+
 /* Buttons */
 .btn {
   display: inline-block;
   padding: 10px 29px;
-  background-color: var(--accessory-color-1);
-  color: var(--light-color);
+  background: var(--accessory-color-1);
+  color: var(--light-color) !important;
   border: none;
   border-radius: 20px;
   transition: 0.5s ease-in-out;
@@ -214,6 +289,7 @@ header .hamburger-button:hover .bar {
 
 .btn:hover {
   opacity: 0.9;
+  transform: scale(1.1);
 }
 
 @media (min-width: 670px) {
@@ -234,7 +310,8 @@ header .hamburger-button:hover .bar {
     margin-top: 0;
   }
 
-  header ul li a:link, header ul li a:visited {
+  header ul li a:link,
+  header ul li a:visited {
     font-weight: 500;
     color: var(--dark-color);
   }
@@ -252,21 +329,27 @@ header .hamburger-button:hover .bar {
 
   header nav ul li:last-of-type a:hover {
     opacity: 0.9;
+    transform: scale(1.1)
   }
+}
 
-  .hero .container {
-    margin-top: 160px;
-  }
-
+@media (min-width: 940px) {
   .hero h1 {
     font-size: 3rem;
   }
 
   .hero h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.4;
   }
 
-  .btn {
-    font-size: 1.4rem;
+  .services .service-content{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    margin-top: 100px;
+  }
+
+  .services .card-grid{
+    grid-template-columns: repeat(3, 1fr);
   }
 }
