@@ -137,7 +137,7 @@ header .hamburger-button:hover .bar {
 }
 
 /*MAIN*/
-main h2{
+main h2 {
   font-size: 2.5rem;
 }
 
@@ -171,29 +171,13 @@ main h2{
   margin-top: 16px;
 }
 
-.custom-shape-divider-bottom-1722010389 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1722010389 svg {
-  position: relative;
-  display: block;
-  width: calc(146% + 1.3px);
-  height: 92px;
-}
-
-.custom-shape-divider-bottom-1722010389 .shape-fill {
-  fill: #f7f7f7;
-}
-
 /*TJÄNSTER*/
-.services .service-content{
+.services {
+  position: relative;
+  padding-bottom: 160px;
+}
+
+.services .service-content {
   margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr;
@@ -202,24 +186,133 @@ main h2{
   justify-items: center;
 }
 
-.services a{
+.services a {
   margin-top: 20px;
 }
 
-.services a:link, .services a:visited {
-  color: var(--accessory-color-2)
+.services a:link,
+.services a:visited {
+  color: var(--accessory-color-2);
 }
 
-.services img{
+.services img {
   box-shadow: var(--shadow);
   border-radius: 20px;
 }
 
-.services .card-grid{
+.services .card-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
   margin-top: 100px;
+}
+
+/*OM OSS*/
+.aboutus {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  position: relative;
+}
+
+.aboutus .container {
+  padding-top: 40px;
+  padding-bottom: 160px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.aboutus img {
+  border-radius: 20px;
+}
+
+.aboutus .btn {
+  margin-top: 16px;
+}
+
+/*KONTAKT*/
+.contact {
+  background-color: var(--accessory-color-1);
+  padding-top: 20px;
+}
+
+.contact .card {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.contact .card:hover {
+  transform: none;
+  cursor: auto;
+}
+
+.contact h2, .contact p{
+  text-align: center;
+}
+
+.contact form{
+  display: grid;
+  grid-template-areas: 
+  "name name"
+  "phone email"
+  "questions questions"
+  "submit submit";
+  gap: 8px;
+  width: 100%;
+}
+
+.contact .name{
+  grid-area: name;
+}
+
+.contact .phone{
+  grid-area: phone;
+}
+
+.contact .email{
+  grid-area: email;
+}
+
+.contact .questions{
+  grid-area: questions;
+}
+
+.contact .submit{
+  grid-area: submit;
+}
+
+.contact input, .contact textarea{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  color: var(--dark-color);
+  background-color: #e6e6e6;
+  resize: none;
+  font-family: "Poppins", sans-serif;
+  transition: 0.5s ease-in-out;
+}
+
+.contact input:hover, .contact textarea:hover{
+  background-color: #e6e6e686;
+}
+
+.contact .submit input{
+  background-color: var(--accessory-color-2);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.contact .submit input:hover{
+  transform: scale(1.02);
+}
+
+.contact label{
+  color: var(--accessory-color-2);
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 /*Utility classes*/
@@ -241,12 +334,12 @@ main h2{
   top: 0;
 }
 
-.red{
+.red {
   color: var(--accessory-color-1);
   font-weight: 800;
 }
 
-.card{
+.card {
   background-color: var(--accessory-color-1);
   border-radius: 20px;
   box-shadow: var(--shadow);
@@ -258,20 +351,20 @@ main h2{
   transition: ease-in-out 0.4s;
 }
 
-.card:hover{
+.card:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
 
-.card i{
+.card i {
   font-size: 2rem;
 }
 
-.card h3{
+.card h3 {
   margin-top: 12px;
 }
 
-.card p{
+.card p {
   margin-top: 8px;
 }
 
@@ -290,6 +383,69 @@ main h2{
 .btn:hover {
   opacity: 0.9;
   transform: scale(1.1);
+}
+
+/*Shape divider classes*/
+.custom-shape-divider-bottom-1722010389 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1722010389 svg {
+  position: relative;
+  display: block;
+  width: calc(146% + 1.3px);
+  height: 92px;
+}
+
+.custom-shape-divider-bottom-1722010389 .shape-fill {
+  fill: #f7f7f7;
+}
+
+.custom-shape-divider-bottom-1722165084 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1722165084 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 110px;
+}
+
+.custom-shape-divider-bottom-1722165084 .shape-fill {
+  fill: #333333;
+}
+
+.custom-shape-divider-bottom-1722167119 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1722167119 svg {
+  position: relative;
+  display: block;
+  width: calc(245% + 1.3px);
+  height: 135px;
+}
+
+.custom-shape-divider-bottom-1722167119 .shape-fill {
+  fill: #c54c3a;
 }
 
 @media (min-width: 670px) {
@@ -329,7 +485,11 @@ main h2{
 
   header nav ul li:last-of-type a:hover {
     opacity: 0.9;
-    transform: scale(1.1)
+    transform: scale(1.1);
+  }
+
+  .contact form{
+    width: 90%;
   }
 }
 
@@ -343,13 +503,22 @@ main h2{
     line-height: 1.4;
   }
 
-  .services .service-content{
+  .services .service-content {
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
     margin-top: 100px;
   }
 
-  .services .card-grid{
+  .services .card-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .aboutus .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  .aboutus .aboutus-content {
+    order: 2;
   }
 }
