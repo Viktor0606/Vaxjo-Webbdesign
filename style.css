@@ -307,6 +307,7 @@ main h2 {
 
 .contact .submit input:hover{
   transform: scale(1.02);
+  cursor: pointer;
 }
 
 .contact label{
