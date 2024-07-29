@@ -236,6 +236,7 @@ main h2 {
 .contact {
   background-color: var(--accessory-color-1);
   padding-top: 20px;
+  padding-bottom: 100px;
 }
 
 .contact .card {
@@ -248,42 +249,44 @@ main h2 {
   cursor: auto;
 }
 
-.contact h2, .contact p{
+.contact h2,
+.contact p {
   text-align: center;
 }
 
-.contact form{
+.contact form {
   display: grid;
-  grid-template-areas: 
-  "name name"
-  "phone email"
-  "questions questions"
-  "submit submit";
+  grid-template-areas:
+    "name name"
+    "phone email"
+    "questions questions"
+    "submit submit";
   gap: 8px;
   width: 100%;
 }
 
-.contact .name{
+.contact .name {
   grid-area: name;
 }
 
-.contact .phone{
+.contact .phone {
   grid-area: phone;
 }
 
-.contact .email{
+.contact .email {
   grid-area: email;
 }
 
-.contact .questions{
+.contact .questions {
   grid-area: questions;
 }
 
-.contact .submit{
+.contact .submit {
   grid-area: submit;
 }
 
-.contact input, .contact textarea{
+.contact input,
+.contact textarea {
   width: 100%;
   padding: 12px;
   border: none;
@@ -295,25 +298,112 @@ main h2 {
   transition: 0.5s ease-in-out;
 }
 
-.contact input:hover, .contact textarea:hover{
+.contact input:hover,
+.contact textarea:hover {
   background-color: #e6e6e686;
 }
 
-.contact .submit input{
+.contact .submit input {
   background-color: var(--accessory-color-2);
   font-weight: 700;
   font-size: 1rem;
 }
 
-.contact .submit input:hover{
+.contact .submit input:hover {
   transform: scale(1.02);
   cursor: pointer;
 }
 
-.contact label{
+.contact label {
   color: var(--accessory-color-2);
   font-weight: 600;
   font-size: 0.9rem;
+}
+
+/*FOOTER*/
+footer {
+  position: relative;
+  padding-top: 160px;
+}
+
+footer .footer-grid .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+footer .footer-grid-item {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .footer-grid-item img {
+  width: 40%;
+}
+
+footer .footer-grid-item h3 {
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+footer .footer-grid-item h4 {
+  margin-bottom: 8px;
+}
+
+footer .footer-grid-item span{
+  display: flex;
+  align-items: center;
+}
+
+footer .footer-grid-item i {
+  color: var(--accessory-color-1);
+  margin-right: 8px;
+}
+
+footer .footer-grid-item a {
+  text-decoration: underline;
+}
+
+footer .footer-flex {
+  background-color: #e6e6e6;
+  padding: 16px 0;
+  margin-top: 28px;
+}
+
+footer .footer-flex .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 40px;
+}
+
+footer .footer-flex a {
+  text-decoration: underline;
+}
+
+/*TACK*/
+.thanks {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.thanks .container-sm .card a {
+  color: var(--light-color);
+  font-size: 1rem;
+  padding: 8px 20px;
+  border: 2px solid var(--light-color);
+  border-radius: 20px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.thanks .card:hover {
+  transform: scale(1);
+  cursor: default;
 }
 
 /*Utility classes*/
@@ -338,6 +428,10 @@ main h2 {
 .red {
   color: var(--accessory-color-1);
   font-weight: 800;
+}
+
+.emp {
+  font-weight: 700;
 }
 
 .card {
@@ -449,6 +543,26 @@ main h2 {
   fill: #c54c3a;
 }
 
+.custom-shape-divider-top-1722281608 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1722281608 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 101px;
+}
+
+.custom-shape-divider-top-1722281608 .shape-fill {
+  fill: #C54C3A;
+}
+
 @media (min-width: 670px) {
   .hamburger-button {
     display: none;
@@ -489,8 +603,13 @@ main h2 {
     transform: scale(1.1);
   }
 
-  .contact form{
+  .contact form {
     width: 90%;
+  }
+
+  footer .footer-grid .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
   }
 }
 
