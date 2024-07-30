@@ -189,8 +189,13 @@
             >
               <!--Namn-->
               <div class="name">
-                <label for="name">Namn</label><br />
-                <input type="text" id="name" name="name" />
+                <label for="name">Namn*</label><br />
+                <input type="text" id="name" name="name" required/>
+              </div>
+              <!--Företagsnamn-->
+              <div class="bname">
+                <label for="bname">Företagsnamn</label><br />
+                <input type="text" id="bname" name="businessname" />
               </div>
               <!--Telefon-->
               <div class="phone">
@@ -199,13 +204,17 @@
               </div>
               <!--Email-->
               <div class="email">
-                <label for="email">Mail</label><br />
-                <input type="email" id="email" name="email" />
+                <label for="email">Mail*</label><br />
+                <input type="email" id="email" name="email" required/>
               </div>
               <!--Övriga tankar / funderingar-->
               <div class="questions">
                 <label for="questions">Övriga tankar / funderingar</label><br />
                 <textarea id="questions" name="questions" rows="5"></textarea>
+              </div>
+              <div class="checkbox">
+                <label for="checkbox">Jag har tagit del av <a href="privacypolicy.html">integritetspolicyn</a> och godkänner villkoren.*</label>
+                <input type="checkbox" id="checkbox" name="Integritetspolicy" required>
               </div>
               <!--Skicka-->
               <div class="submit">
@@ -265,7 +274,7 @@
           <section class="footer-flex">
             <div class="container">
               <p>© Växjö Webbdesign 2024</p>
-              <a href="">Integritetspolicy</a>
+              <a href="privacypolicy.html">Integritetspolicy</a>
             </div>
           </section>
     </footer>

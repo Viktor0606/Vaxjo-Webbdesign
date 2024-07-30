@@ -257,16 +257,23 @@ main h2 {
 .contact form {
   display: grid;
   grid-template-areas:
-    "name name"
-    "phone email"
-    "questions questions"
-    "submit submit";
+    "name"
+    "bname"
+    "phone"
+    "email"
+    "questions"
+    "checkbox"
+    "submit";
   gap: 8px;
   width: 100%;
 }
 
 .contact .name {
   grid-area: name;
+}
+
+.contact .bname {
+  grid-area: bname;
 }
 
 .contact .phone {
@@ -279,6 +286,31 @@ main h2 {
 
 .contact .questions {
   grid-area: questions;
+}
+
+.contact .checkbox {
+  grid-area: checkbox;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contact .checkbox input[type="checkbox"] {
+  width: auto;
+  transform: scale(1.3);
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.contact .checkbox label {
+  color: var(--dark-color);
+  font-weight: 500;
+}
+
+.contact .checkbox label a {
+  display: inline;
+  text-decoration: underline;
+  color: var(--accessory-color-2);
 }
 
 .contact .submit {
@@ -298,8 +330,8 @@ main h2 {
   transition: 0.5s ease-in-out;
 }
 
-.contact input:hover,
-.contact textarea:hover {
+.contact input:focus,
+.contact textarea:focus {
   background-color: #e6e6e686;
 }
 
@@ -350,7 +382,7 @@ footer .footer-grid-item h4 {
   margin-bottom: 8px;
 }
 
-footer .footer-grid-item span{
+footer .footer-grid-item span {
   display: flex;
   align-items: center;
 }
@@ -560,7 +592,19 @@ footer .footer-flex a {
 }
 
 .custom-shape-divider-top-1722281608 .shape-fill {
-  fill: #C54C3A;
+  fill: #c54c3a;
+}
+
+@media (min-width: 570px) {
+  .contact form {
+    grid-template-areas:
+      "name name"
+      "bname bname"
+      "phone email"
+      "questions questions"
+      "checkbox checkbox"
+      "submit submit";
+  }
 }
 
 @media (min-width: 670px) {
