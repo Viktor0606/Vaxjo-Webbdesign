@@ -382,7 +382,7 @@ footer .footer-grid-item h4 {
   margin-bottom: 8px;
 }
 
-footer .footer-grid-item span {
+footer .footer-grid-item .span {
   display: flex;
   align-items: center;
 }
@@ -436,6 +436,33 @@ footer .footer-flex a {
 .thanks .card:hover {
   transform: scale(1);
   cursor: default;
+}
+
+/*PRIVACY POLICY*/
+.privacy-policy {
+  min-height: calc(100vh - 105px);
+  background-color: var(--accessory-color-1);
+  color: var(--light-color);
+  padding: 60px 0;
+}
+
+.privacy-policy .container-sm h1 {
+  font-size: 2rem;
+}
+
+.privacy-policy .container-sm p {
+  margin-top: 8px;
+}
+
+.privacy-policy .container-sm ul {
+  padding-left: 1em;
+}
+
+.privacy-policy .container-sm ul > li::before {
+  display: inline-block;
+  content: "-";
+  width: 1em;
+  margin-left: -1em;
 }
 
 /*Utility classes*/
